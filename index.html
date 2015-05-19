@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>On.js by clayendisk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">On.js</h1>
+      <h2 class="project-tagline">Performance Environment Library (Client-side JavaScript)</h2>
+      <a href="https://github.com/clayendisk/on.js" class="btn">View on GitHub</a>
+      <a href="https://github.com/clayendisk/on.js/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/clayendisk/on.js/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="onjs" class="anchor" href="#onjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>on.js</h1>
+
+<pre><code>return true;
+</code></pre>
+
+<p><em>A JavaScript Library</em> </p>
+
+<h3>
+<a id="what-is-onjs" class="anchor" href="#what-is-onjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is on.js?</h3>
+
+<p>This free library aims to help client-side programmers maintain performance and functionality in the cross-browser environment, where the JavaScript run-time manages HTML/CSS content and presentation.</p>
+
+<p>Allow me to thank some of the great people that can relate!</p>
+
+<p><em>Supporters!</em></p>
+
+<div class="highlight highlight-javascript"><pre>Thank(You);</pre></div>
+
+<p><a href="Http://xirsys.com">XirSys, awesome, free WebRTC Cloud Service!</a></p>
+
+<ul>
+<li>making the web a better place</li>
+</ul>
+
+<p><a href="http://xirsys.com">Alex Thomas, great guy and start-up founder of Pylon.io!</a></p>
+
+<ul>
+<li>seeing on's benefit in Pylon's future web success</li>
+</ul>
+
+<p><em>Contributers!</em></p>
+
+<div class="highlight highlight-javascript"><pre>Thank(You);</pre></div>
+
+<p><a href="https://github.com/jdalton/">John-David Dalton, great guy and the creator of Lo-Dash!</a></p>
+
+<ul>
+<li>renaming on's toString return value</li>
+</ul>
+
+<hr>
+
+<h3>
+<a id="what-is-onjs-1" class="anchor" href="#what-is-onjs-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is on.js?</h3>
+
+<p><em>A Javascript Library</em></p>
+
+<p>It uniquely integrates the essentials of web JavaScript.</p>
+
+<ul>
+<li>a.) Best-practices</li>
+<li>b.) Cross-browser compatability</li>
+<li>c.) DOM iteration/manipulation</li>
+<li>d.) Event callbacks</li>
+<li>e.) Ajax polling</li>
+<li>f.) File-uploading</li>
+<li>g.) Script-loading</li>
+<li>h.) Asynchronous scope-intelligence</li>
+<li>i.) Datatype-detection</li>
+<li>j.) Iframes and more!</li>
+</ul>
+
+<p>Including optional resources for development:</p>
+
+<ul>
+<li>* Scope-intelligent console wiki</li>
+</ul>
+
+<hr>
+
+<p><em>A Keyword</em> </p>
+
+<div class="highlight highlight-javascript"><pre>on</pre></div>
+
+<p>The single keyword, on, sweetens your javascript with two flavors of sugar!</p>
+
+<hr>
+
+<p><em>A Syntax</em> </p>
+
+<div class="highlight highlight-javascript"><pre>(command)[on](data)(parameter);</pre></div>
+
+<p>Friendly and intuitive!</p>
+
+<h1></h1>
+
+<div class="highlight highlight-javascript"><pre>
+(<span class="pl-s"><span class="pl-pds">'</span>mouseup<span class="pl-pds">'</span></span>)[on](theElement)
+(   <span class="pl-k">function</span>(<span class="pl-smi">e</span>)
+    {   
+        <span class="pl-v">this</span>;
+    }
+);
+</pre></div>
+
+<div class="highlight highlight-javascript"><pre>
+(<span class="pl-s"><span class="pl-pds">'</span>for each img<span class="pl-pds">'</span></span>)[on](theElement)
+(   <span class="pl-k">function</span>(<span class="pl-smi">i</span>)
+    {   
+        <span class="pl-v">this</span>[i];
+        <span class="pl-k">return</span> <span class="pl-c1">false</span>;
+    }
+);
+</pre></div>
+
+<div class="highlight highlight-javascript"><pre>
+(<span class="pl-s"><span class="pl-pds">'</span>POST applesauce=true<span class="pl-pds">'</span></span>)[on](<span class="pl-s"><span class="pl-pds">'</span>../ajax/url/?topic=food<span class="pl-pds">'</span></span>)
+(   <span class="pl-k">function</span>()
+    {   
+        <span class="pl-v">this</span>.POST;
+        <span class="pl-v">this</span>.GET;
+        <span class="pl-v">this</span>.<span class="pl-c1">responseText</span>;
+    }
+);
+</pre></div>
+
+<hr>
+
+<p><em>A Standard</em> </p>
+
+<div class="highlight highlight-javascript"><pre>on[type];</pre></div>
+
+<p>Conventional augmentation!</p>
+
+<h1></h1>
+
+<div class="highlight highlight-javascript"><pre>on.<span class="pl-c1">document</span>.eachElementByAttribute
+(   <span class="pl-s"><span class="pl-pds">'</span>the-attribute<span class="pl-pds">'</span></span>
+,   <span class="pl-s"><span class="pl-pds">'</span>the-value<span class="pl-pds">'</span></span>
+,   <span class="pl-k">function</span>(<span class="pl-smi">i</span>)                        
+    {
+        <span class="pl-v">this</span>[i];                  
+        <span class="pl-k">return</span> <span class="pl-c1">false</span>;
+    }
+);</pre></div>
+
+<div class="highlight highlight-javascript"><pre>on.element.offsetLeft.<span class="pl-c1">call</span>(theElement);</pre></div>
+
+<div class="highlight highlight-javascript"><pre>on.iframe.<span class="pl-c1">document</span>(theIframeElement);</pre></div>
+
+<hr>
+
+<p><em>A Paradigm</em></p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-v">this</span> <span class="pl-k">instanceof</span> Cool;</pre></div>
+
+<p>Fluidly adapts to your HTML with</p>
+
+<ul>
+<li>Hybrid functionality!</li>
+<li>Nestable bindings!</li>
+<li>Graceful degradation!</li>
+<li>Polyfill!</li>
+<li>&amp; More!</li>
+</ul>
+
+<h1></h1>
+
+<div class="highlight highlight-html"><pre>
+&lt;<span class="pl-ent">form</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>TheUploadForm<span class="pl-pds">"</span></span> <span class="pl-e">action</span>=<span class="pl-s"><span class="pl-pds">"</span>../the/static/url<span class="pl-pds">"</span></span>&gt;
+
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>file<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Select A File<span class="pl-pds">"</span></span> /&gt;
+
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>submit<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Submit<span class="pl-pds">"</span></span> /&gt;
+
+&lt;/<span class="pl-ent">form</span>&gt;
+</pre></div>
+
+<div class="highlight highlight-javascript"><pre>
+(<span class="pl-s"><span class="pl-pds">'</span>submit<span class="pl-pds">'</span></span>)[on](<span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>TheUploadForm<span class="pl-pds">'</span></span>))
+(   <span class="pl-k">function</span>(<span class="pl-smi">e</span>)
+    {
+        on.<span class="pl-c1">event</span>.preventDefault.<span class="pl-c1">call</span>(e);
+
+        <span class="pl-v">this</span>.<span class="pl-c1">action</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>../the/ajax/url<span class="pl-pds">"</span></span>;
+
+        (<span class="pl-s"><span class="pl-pds">'</span>upload<span class="pl-pds">'</span></span>)[on](<span class="pl-v">this</span>)
+        (   <span class="pl-k">function</span>(<span class="pl-smi">e</span>)
+            {
+                <span class="pl-en">console</span><span class="pl-c1">.log</span>( <span class="pl-c1">100</span> <span class="pl-k">*</span> ( e.loaded/e.total ) <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span>%<span class="pl-pds">"</span></span> )
+            }
+        );
+
+        (<span class="pl-s"><span class="pl-pds">'</span>POST<span class="pl-pds">'</span></span>)[on](<span class="pl-v">this</span>)
+        (   <span class="pl-k">function</span>()
+            {
+                <span class="pl-en">console</span><span class="pl-c1">.log</span>( <span class="pl-v">this</span>.<span class="pl-c1">responseText</span> )
+            }
+        );
+    }
+);
+</pre></div>
+
+<hr>
+
+<p><em>A Mentor</em></p>
+
+<div class="highlight highlight-javascript"><pre>on.about();</pre></div>
+
+<p>Live console manual!</p>
+
+<p>source: /opt/on.about.js</p>
+
+<ul>
+<li>Inject during development</li>
+<li>Delete during production</li>
+</ul>
+
+<p>method: on.about()</p>
+
+<ul>
+<li>Call anywhere!</li>
+<li>Asynchronously scope-intelligent</li>
+</ul>
+
+<h1></h1>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> contentBody <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>content-body<span class="pl-pds">'</span></span>);
+<span class="pl-k">var</span> contentTabs <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>content-tabs<span class="pl-pds">'</span></span>);
+
+<span class="pl-k">var</span> activeTab;
+
+(<span class="pl-s"><span class="pl-pds">'</span>mouseover<span class="pl-pds">'</span></span>)[on](contentTabs.children)
+(   <span class="pl-k">function</span>(<span class="pl-smi">e</span>)
+    {
+        on.<span class="pl-c1">event</span>.preventDefault.<span class="pl-c1">call</span>(e);
+        on.about(); <span class="pl-c">//prints man page for Events on Elements</span>
+
+        <span class="pl-k">var</span> me <span class="pl-k">=</span> activeTab <span class="pl-k">=</span> <span class="pl-v">this</span>;
+
+        (<span class="pl-s"><span class="pl-pds">'</span>GET<span class="pl-pds">'</span></span>)[on](<span class="pl-v">this</span>.<span class="pl-c1">href</span><span class="pl-k">+</span><span class="pl-s"><span class="pl-pds">"</span>?ajax=true<span class="pl-pds">"</span></span>)
+        (   <span class="pl-k">function</span>()
+            {
+                <span class="pl-k">if</span> (activeTab <span class="pl-k">!=</span> me) <span class="pl-k">return</span>;
+
+                on.about(); <span class="pl-c">//prints man page for ajax GET on URL</span>
+                contentBody.innerHTML <span class="pl-k">=</span> <span class="pl-v">this</span>.<span class="pl-c1">responseText</span>;
+            }
+        );
+    }
+);
+
+on.about(); <span class="pl-c">//prints man page for on.js</span></pre></div>
+
+<hr>
+
+<p><em>A Performance</em> </p>
+
+<p>Benchmarks!</p>
+
+<p>DOM</p>
+
+<ul>
+<li><a href="http://jsperf.com/on-js-lib-dom-benchmark">http://jsperf.com/on-js-lib-dom-benchmark</a></li>
+<li><a href="http://jsperf.com/javascript-dom-benchmark">http://jsperf.com/javascript-dom-benchmark</a></li>
+</ul>
+
+<p>Classes</p>
+
+<ul>
+<li><a href="http://jsperf.com/on-js-lib-classes-benchmark">http://jsperf.com/on-js-lib-classes-benchmark</a></li>
+<li><a href="http://jsperf.com/javascript-classes-benchmark">http://jsperf.com/javascript-classes-benchmark</a></li>
+</ul>
+
+<p>Attributes</p>
+
+<ul>
+<li><a href="http://jsperf.com/on-js-lib-attributes-benchmark">http://jsperf.com/on-js-lib-attributes-benchmark</a></li>
+<li><a href="http://jsperf.com/javascript-attributes-benchmark">http://jsperf.com/javascript-attributes-benchmark</a></li>
+</ul>
+
+<hr>
+
+<p><img src="https://raw.githubusercontent.com/clayendisk/on.js/master/benchmark/Chrome/for%20each.png" alt="alt text" title="For Each Raw Iteration Speed"></p>
+
+<hr>
+
+<p><em>A Revolution</em></p>
+
+<p>Download the <a href="https://github.com/clayendisk/on.js/tree/master/script/lib/">source</a>!</p>
+
+<ul>
+<li>
+<em>14kb</em> <a href="https://cdn.rawgit.com/clayendisk/on.js/master/script/lib/on.js">Min.</a>
+</li>
+</ul>
+
+<p>Beginners, grab <a href="https://cdn.rawgit.com/clayendisk/on.js/master/script/opt/on.about.js">this</a> too!</p>
+
+<ul>
+<li><a href="https://github.com/clayendisk/on.js/wiki/About">Live Console Manual</a></li>
+</ul>
+
+<p>Check out the <a href="https://github.com/clayendisk/on.js/tree/master/example">tutorials</a>!</p>
+
+<ul>
+<li><a href="https://github.com/clayendisk/on.js/blob/master/example/about.html">Live Console Manual</a></li>
+<li><a href="https://github.com/clayendisk/on.js/blob/master/example/node.html">Element Resources</a></li>
+<li><a href="https://github.com/clayendisk/on.js/blob/master/example/class.html">Element Classes</a></li>
+<li><a href="https://github.com/clayendisk/on.js/blob/master/example/event.html">Event Callbacks</a></li>
+<li><a href="https://github.com/clayendisk/on.js/blob/master/example/ajax/basic_overview.html">Ajax Requests</a></li>
+<li><a href="https://github.com/clayendisk/on.js/blob/master/example/ajax/submit.html">Ajax Submission</a></li>
+<li><a href="https://github.com/clayendisk/on.js/blob/master/example/syntax.html">Syntax Overview</a></li>
+</ul>
+
+<p>Bookmark the <a href="https://github.com/clayendisk/on.js/wiki/">wiki</a>!</p>
+
+<ul>
+<li><a href="https://github.com/clayendisk/on.js/wiki/About">Live Console Manual</a></li>
+<li><a href="https://github.com/clayendisk/on.js/wiki/DOM">DOM</a></li>
+<li><a href="https://github.com/clayendisk/on.js/wiki/Iframes">Iframes</a></li>
+<li><a href="https://github.com/clayendisk/on.js/wiki/Events">Events</a></li>
+<li><a href="https://github.com/clayendisk/on.js/wiki/For-Each">For Each</a></li>
+<li><a href="https://github.com/clayendisk/on.js/wiki/Ajax">Ajax</a></li>
+<li><a href="https://github.com/clayendisk/on.js/wiki/Ajax-Form-Submission">Ajax Forms</a></li>
+<li><a href="https://github.com/clayendisk/on.js/wiki/Ajax-Form-File-Uploading">Ajax Uploads</a></li>
+<li><a href="https://github.com/clayendisk/on.js/wiki/Script-Loading">Script-Loading</a></li>
+</ul>
+
+<hr>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/clayendisk/on.js">On.js</a> is maintained by <a href="https://github.com/clayendisk">clayendisk</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
