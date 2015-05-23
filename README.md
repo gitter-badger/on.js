@@ -1,5 +1,7 @@
 on.js
 ====================================
+
+[![Join the chat at https://gitter.im/clayendisk/on.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/clayendisk/on.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
     return true;
 
 _A JavaScript Library_ 
